@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+}
+
+/* To show placeholder in tiptap editor */
+.tiptap p.is-editor-empty:first-child::before {
+  @apply pointer-events-none float-left h-0 text-ring content-[attr(data-placeholder)];
+}
+
+/* To hide the default month date shown without dropdown in the calendar */
+.rdp-vhidden {
+  @apply hidden;
+}
